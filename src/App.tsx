@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import ScrollableLayout from './layouts/ScrollableLayout';
 import { Landing } from './pages/Landing';
 import { Authentication } from './pages/Authentication';
@@ -31,28 +32,61 @@ function App() {
             <ProfileProvider>
               <ApiProvider>
                 <Routes>
-                  <Route path="/" element={<Landing />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/pricing" element={<Pricing />} />
-
-                  {/* Articles */}
-                  <Route path="/articles" element={<Articles />} />
-                  <Route path="/article/:slug" element={<ArticlePage />} />
-
-                  {/* Authentication Pages */}
+                  {/* Public routes */}
                   <Route path="/authentication" element={<Authentication />} />
                   <Route path="/reset-password" element={<ResetPassword />} />
 
-                  {/* Onboarding Pages */}
-                  <Route path="/onboarding" element={<Onboarding />} />
-
-                  {/* Main Page */}
-                  <Route path="/dashboard" element={<Dashboard />} />
-
-                  <Route path="/chat/:chatId" element={<ChatPage />} />
-
-                  <Route path="*" element={<NotFound />} />
+                  {/* Protected routes */}
+                  <Route path="/" element={
+                    <ProtectedRoute>
+                      <Landing />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/about" element={
+                    <ProtectedRoute>
+                      <About />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/contact" element={
+                    <ProtectedRoute>
+                      <Contact />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/pricing" element={
+                    <ProtectedRoute>
+                      <Pricing />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/articles" element={
+                    <ProtectedRoute>
+                      <Articles />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/article/:slug" element={
+                    <ProtectedRoute>
+                      <ArticlePage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/onboarding" element={
+                    <ProtectedRoute>
+                      <Onboarding />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/dashboard" element={
+                    <ProtectedRoute>
+                      <Dashboard />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="/chat/:chatId" element={
+                    <ProtectedRoute>
+                      <ChatPage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="*" element={
+                    <ProtectedRoute>
+                      <NotFound />
+                    </ProtectedRoute>
+                  } />
                 </Routes>
               </ApiProvider>
             </ProfileProvider>

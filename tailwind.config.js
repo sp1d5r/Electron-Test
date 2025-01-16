@@ -22,47 +22,47 @@ module.exports = {
           ring: "hsl(var(--ring))",
           background: "hsl(var(--background))",
           foreground: "hsl(var(--foreground))",
-          coffee: {
-            50: '#FAF6F1',  // Lightest coffee cream
-            100: '#E8DED3',  // Light coffee cream
-            200: '#D5C3B3',  // Coffee with lots of cream
-            300: '#C2A893',  // Light coffee
-            400: '#AF8D73',  // Medium coffee
-            500: '#9C7253',  // Coffee
-            600: '#895733',  // Dark coffee
-            700: '#763C13',  // Darker coffee
-            800: '#632100',  // Very dark coffee
-            900: '#501800',  // Darkest coffee
+          corporate: {
+            50: '#F5F7FA',  // Lightest gray
+            100: '#E4E7EB',  // Light gray
+            200: '#CBD2D9',  // Gray
+            300: '#9AA5B1',  // Medium gray
+            400: '#7B8794',  // Dark gray
+            500: '#616E7C',  // Darker gray
+            600: '#52606D',  // Very dark gray
+            700: '#3E4C59',  // Almost black
+            800: '#323F4B',  // Corporate black
+            900: '#1F2933',  // Deepest black
           },
           primary: {
-            DEFAULT: "hsl(288 70% 90%)", // Soft lavender
-            foreground: "hsl(288 30% 25%)",
-            dark: "hsl(288 40% 40%)", // Adjusted for dark mode
-            "dark-foreground": "hsl(288 95% 95%)"
+            DEFAULT: "hsl(215 65% 45%)", // Professional blue
+            foreground: "hsl(0 0% 100%)",
+            dark: "hsl(215 65% 35%)",
+            "dark-foreground": "hsl(0 0% 100%)"
           },
           secondary: {
-            DEFAULT: "hsl(152 70% 90%)", // Soft mint
-            foreground: "hsl(152 30% 25%)",
-            dark: "hsl(152 40% 40%)", // Adjusted for dark mode
-            "dark-foreground": "hsl(152 95% 95%)"
+            DEFAULT: "hsl(215 25% 95%)", // Light blue-gray
+            foreground: "hsl(215 65% 45%)",
+            dark: "hsl(215 25% 20%)",
+            "dark-foreground": "hsl(215 65% 85%)"
           },
           destructive: {
-            DEFAULT: "hsl(350 70% 90%)", // Soft rose
-            foreground: "hsl(350 30% 25%)",
-            dark: "hsl(350 70% 30%)", // Dark rose
-            "dark-foreground": "hsl(350 95% 95%)"
+            DEFAULT: "hsl(0 65% 45%)", // Professional red
+            foreground: "hsl(0 0% 100%)",
+            dark: "hsl(0 65% 35%)",
+            "dark-foreground": "hsl(0 0% 100%)"
           },
           muted: {
-            DEFAULT: "hsl(210 40% 96%)", // Soft blue-gray
-            foreground: "hsl(215 25% 40%)",
-            dark: "hsl(210 40% 20%)", // Dark blue-gray
+            DEFAULT: "hsl(215 25% 95%)",
+            foreground: "hsl(215 25% 35%)",
+            dark: "hsl(215 25% 20%)",
             "dark-foreground": "hsl(215 25% 80%)"
           },
           accent: {
-            DEFAULT: "hsl(20 70% 90%)", // Soft peach
-            foreground: "hsl(20 30% 25%)",
-            dark: "hsl(20 40% 40%)", // Adjusted for dark mode
-            "dark-foreground": "hsl(20 95% 95%)"
+            DEFAULT: "hsl(215 65% 45%)",
+            foreground: "hsl(0 0% 100%)",
+            dark: "hsl(215 65% 35%)",
+            "dark-foreground": "hsl(0 0% 100%)"
           },
           popover: {
             DEFAULT: "hsl(var(--background))",
